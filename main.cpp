@@ -16,7 +16,7 @@ int main()
 {
     srand(time(0)); // Seed the random number generator
 
-    int initialBacteria = 0; // Starting population of bacteria (should be initialized to 1000)
+    int initialBacteria = 1000; // Starting population of bacteria (should be initialized to 1000)
     int reproductionRate = 3; // Each bacterium reproduces three times per cycle
     int deathRate = 400; // Bacteria that die per cycle
     int mutationChance = 10; // Chance (in percentage) of mutation occurring
@@ -31,7 +31,7 @@ int main()
 
         // Death phase
         initialBacteria -= deathRate;
-
+    
         // Mutation phase
         int randomValue = rand() % 100;
         if (randomValue < mutationChance)
@@ -52,6 +52,9 @@ int main()
 
         // Ensure population doesn't drop below zero
                 if (initialBacteria < 0)
+                {
+                    initialBacteria < 0;
+                }
         
      
         
@@ -68,7 +71,7 @@ int main()
     }
     else
     {
-        std::cout << "After " << cycles << " cycles, " << initialBacteria <<  "bacteria remain." << std::endl; // Intentional operator error
+        std::cout << "After " << cycles << " cycles, " << initialBacteria <<  " bacteria remain. " << std::endl; // Intentional operator error
     }
 
     return 0;
